@@ -7,11 +7,17 @@ def main():
     print(str1)
     
     # TODO: create a template with placeholders
-    
+    templ = Template("Das ist der Kurs '${title}' von ${authors}")
     # TODO: use the substitute method with keyword arguments
-    
+    str2 = templ.substitute(title= "Fortgeschrittene Python-Techniken", authors="Joe Marini und Ralph Steyer")
+    print(str2)
     # TODO: use the substitute method with a dictionary
-   
+    data={
+        "authors":"Joe Marini und Ralph Steyer"
+        "title": "Fortgeschrittene Python-Techniken"
+    }
+    str3 = templ.substitute(data)
+    print(str3)
     
 if __name__ == "__main__":
     main()
